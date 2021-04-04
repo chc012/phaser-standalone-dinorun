@@ -70,9 +70,33 @@ export class BootScene extends Phaser.Scene {
    * is currently active, so they can be accessed anywhere.
    */
   private loadAssets() {
-    // Load sample assets
 
-    // Source: Open Game Art
-    this.load.image('man', 'assets/sprites/character.png');
+    this.load.image("cloud", "assets/sprites/cloud.png");
+    this.load.image("game_over", "assets/sprites/game_over.png");
+    this.load.image("ground", "assets/sprites/ground.png");
+    this.load.image("logo", "assets/sprites/logo.png");
+    this.load.image("replay", "assets/sprites/replay_button.png");
+    this.load.image("bg", "assets/sprites/bg.png");
+    
+    this.load.spritesheet(
+      "cacti",
+      "assets/sprites/cacti.png",
+      {frameWidth: 68, frameHeight: 70}
+    );
+    this.load.spritesheet(
+      "dino",
+      "assets/sprites/dino.png",
+      {frameWidth: 88, frameHeight: 95}
+    );
+    this.load.spritesheet(
+      "dino_duck",
+      "assets/sprites/dino_ducking.png",
+      {frameWidth: 118, frameHeight: 95}
+    );
+    this.load.spritesheet(
+      "ptera",
+      "assets/sprites/ptera.png",
+      {frameWidth: 92, frameHeight: 81}
+    );
   }
 }

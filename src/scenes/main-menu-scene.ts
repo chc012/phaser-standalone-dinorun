@@ -1,4 +1,5 @@
 import { MenuButton } from '../ui/menu-button';
+import { getGameWidth, getGameHeight } from '../helpers';
 
 const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   active: false,
@@ -21,11 +22,11 @@ export class MainMenuScene extends Phaser.Scene {
       })
       .setFontSize(24);
 
-    new MenuButton(this, 100, 150, 'Start Game', () => {
+    new MenuButton(this, getGameWidth(this)*0.25, getGameHeight(this)*0.75, 'Start Game', () => {
       this.scene.start('Game');
     });
 
-    new MenuButton(this, 100, 250, 'Settings', () => console.log('settings button clicked'));
+    new MenuButton(this, getGameWidth(this)*0.5, getGameHeight(this)*0.75, 'Settings', () => console.log('settings button clicked'));
 
     new MenuButton(this, 100, 350, 'Help', () => console.log('help button clicked'));
   }
