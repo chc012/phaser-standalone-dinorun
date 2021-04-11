@@ -91,7 +91,7 @@ export class BootScene extends Phaser.Scene {
     this.load.spritesheet(
       "dino_duck",
       "assets/sprites/dino_ducking.png",
-      {frameWidth: 118, frameHeight: 95}
+      {frameWidth: 118, frameHeight: 60}
     );
     this.load.spritesheet(
       "ptera",
