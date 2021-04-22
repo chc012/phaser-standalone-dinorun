@@ -7,7 +7,7 @@ const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   key: 'Game',
 };
 
-const JUMP_FORCE = -450;
+const JUMP_FORCE = -550;
 const BASE_SPEED = -200;
 const BASE_SCORE = 0;
 const BASE_FRAME = 0;
@@ -94,6 +94,7 @@ export class GameScene extends Phaser.Scene {
       {fontSize: "20px", color: "#000"}
     );
     this.highScoreText.setOrigin(1, 0);
+    this.highScoreText.setDepth(2);
     
     // Animation for dino and ptera
     this.anims.create({
@@ -146,7 +147,7 @@ export class GameScene extends Phaser.Scene {
     // hard-coded, magical
 
     // Ground
-    this.ground.tilePositionX -= this.speed / 100;
+    this.ground.tilePositionX -= this.speed / 65;
 
     // Clouds
     if (this.cloud.getLength() < 5
@@ -189,7 +190,7 @@ export class GameScene extends Phaser.Scene {
       new_cactus.setVelocityX(this.speed);
       new_cactus.setOrigin(0, 1);
       new_cactus.setSize(
-        getGameWidth(this) * 0.08,
+        getGameWidth(this) * 0.04,
         getGameHeight(this) * 0.24 * 0.88
       );
       new_cactus.setDisplaySize(

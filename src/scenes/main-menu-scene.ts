@@ -25,10 +25,6 @@ export class MainMenuScene extends Phaser.Scene {
     new MenuButton(this, getGameWidth(this)*0.25, getGameHeight(this)*0.75, 'Start Game', () => {
       this.scene.start('Game');
     });
-
-    new MenuButton(this, getGameWidth(this)*0.5, getGameHeight(this)*0.75, 'Settings', () => {
-      this.scene.start("GameOver");
-    });
+    
   }
-  
 }
