@@ -86,6 +86,7 @@ export class GameScene extends Phaser.Scene {
       {fontSize: "20px", color: "#000"}
     );
     this.scoreText.setOrigin(1, 0);
+    this.scoreText.setDepth(2);
 
     this.highScoreText = this.add.text(
       getGameWidth(this) * 0.8,
