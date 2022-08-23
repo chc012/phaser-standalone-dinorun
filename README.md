@@ -1,4 +1,4 @@
-# My Phaser 3 + TypeScript Boilerplate
+# Phaser Standalone Dinorun
 
 Many thanks to Joe Bustamante (https://spin.atomicobject.com/2019/07/13/phaser-3-typescript-tutorial/) for providing the starter kit.
 
